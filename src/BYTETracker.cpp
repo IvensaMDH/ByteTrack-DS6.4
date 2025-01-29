@@ -1,9 +1,9 @@
 #include "BYTETracker.h"
 
 BYTETracker::BYTETracker(int frame_rate, int track_buffer) {
-    track_thresh  = 0.3; //low-confidence selection threshold, below which the detection box is not tracked.
-    high_thresh   = 0.7; 
-    match_thresh  = 0.7; //matching threshold for the IOU of the previous frame and the second frame, if there is a (1-IOU) > match_thresh, the direct tracking fails.
+    track_thresh  = 0.2; //low-confidence selection threshold, below which the detection box is not tracked.
+    high_thresh   = 0.8; 
+    match_thresh  = 0.6; //matching threshold for the IOU of the previous frame and the second frame, if there is a (1-IOU) > match_thresh, the direct tracking fails.
     frame_id      = 0;
     max_time_lost = 5;
 }
