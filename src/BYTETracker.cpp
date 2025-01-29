@@ -5,7 +5,7 @@ BYTETracker::BYTETracker(int frame_rate, int track_buffer) {
     high_thresh   = 0.75; 
     match_thresh  = 0.95; //matching threshold for the IOU of the previous frame and the second frame, if there is a (1-IOU) > match_thresh, the direct tracking fails.
     frame_id      = 0;
-    max_time_lost = 5;
+    max_time_lost = 10;
 }
 
 BYTETracker::~BYTETracker() {
